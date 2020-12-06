@@ -12,7 +12,7 @@ public class Nodouno {
     public void Agregar(){
         Nodo tempo;
 
-        System.out.println("Ingrese El Dato");
+        System.out.println("Ingrese El Dato:");
         if(fin == null){
             fin=new Nodo();
             fin.Dato=entrada.nextLine();
@@ -35,15 +35,16 @@ public class Nodouno {
          }       
      }
      else{
-                 System.out.println("Lista Vacia");
+                 System.out.println("-------- Lista Vacia -------- ");
                  }
     }   
     public void Eliminar(){
         if(fin !=null){
             fin=fin.sig;
+            System.out.println("-------- Nodo Eliminado -------- ");
         }
         else{
-            System.out.print("no hay nada que eliminar");
+            System.out.print("Lista Vacia , No Hay Elementos a Eliminar -------- ");
         }
     }
     public static void main(String[] args) {
@@ -52,6 +53,7 @@ int opc=0;
 String Dato;
  Nodouno no=new  Nodouno();
  do{
+     System.out.println("-------- Menú Nodo --------");
      System.out.print("1. Agregar\n"
                     + "2. Mostrar\n"
                     + "3. Eliminar\n"
@@ -69,6 +71,5 @@ String Dato;
      }
  } while(opc !=4);
  
-    }
-    
+    }   
 }
